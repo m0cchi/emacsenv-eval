@@ -15,5 +15,5 @@ shift 1
 TMP_FILENAME=$(cat $RAND | LC_CTYPE=C tr -dc '[:alnum:]' | head -c 40)
 TMP_FILENAME=/tmp/emacsenv_$TMP_FILENAME.el
 echo $ELISP_CODE > $TMP_FILENAME
-emacs --script $TMP_FILENAME
+emacs --script $TMP_FILENAME $*
 rm -f $TMP_FILENAME
